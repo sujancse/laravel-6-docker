@@ -12,10 +12,5 @@
 */
 
 Route::get('/', function () {
-    try {
-        return \DB::connection()->getPdo();
-    } catch (\Exception $e) {
-        dd("Could not connect to the database.  Please check your configuration. error:" . $e->getMessage());
-    }
     return view('welcome');
 });
